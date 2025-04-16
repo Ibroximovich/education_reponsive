@@ -1,0 +1,53 @@
+.class{
+    &__wrapper{
+        @include Displey($items:center,$space:center,$gap:86px);
+        flex-wrap: wrap;
+        @media (max-width:730px){
+            @include Displey($items:center,$space:center,$gap:55px);
+
+        }
+    }
+    text-align: center;
+    &__h2{
+        @include Textstyle($fw:700,$fs:96px,$lh:100%,$ls:0%,$clr:#EEEEEE);  
+        margin-top: 146px;
+        @media (max-width:730px){
+            margin-top: 67px;
+        }
+    }
+    &__h3{
+        @include Textstyle($fw:700,$fs:40px,$lh:100%,$ls:0%,$clr:$color-black);  
+        margin-bottom: 105px;
+        @media (max-width:730px){
+            margin-bottom:76px;
+            @include Textstyle($fw:700,$fs:32px,$lh:100%,$ls:0%,$clr:$color-black);  
+        }
+    }
+    &__wrapper-content{
+        background-color: $color-blue;
+        border-radius: 15px;
+        padding:19px 17px 33px 19px ;
+        max-width: 310px;
+    }
+    &__content-h3{
+        margin-top: 25px;
+        @include Textstyle($fw:600,$fs:30px,$lh:100%,$ls:0%,$clr:#FAFBFD);  
+    }
+    &__content-h4{
+        margin-top: 15px;
+        @include Textstyle($fw:500,$fs:18px,$lh:100%,$ls:1px,$clr:#FAFBFD);  
+    }
+    &__content-p{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        @include Textstyle($fw:700,$fs:14px,$lh:100%,$ls:1px,$clr:$color-white);  
+    }
+    &__content-btn{
+        @include BtnStyle($btnClr:$color-blue,$btnbg:white,$btnborder:transparent)
+    }
+    @include Textstyle($fw:500,$fs:24px,$lh:100%,$ls:0%,$clr:$btnClr);
+    padding: 11px 35px;
+    background-color: $btnbg;
+    border-radius: 10px;
+    border: 3px solid $btnborder;
+}

@@ -1,0 +1,68 @@
+.site-header{
+    background-color: $color-blue;
+    padding: 16px 0;
+    @media(max-width:729px){
+        padding: 10px 0px;
+    }
+}
+
+.header{
+    @include Displey($items:center,$space:space-between,$gap:0px);
+    &__logo-link{
+        img{
+            @media(max-width:729px){
+                height: 80px; 
+                height: 57px;
+            }
+        }
+    }
+    &__navbar{
+        @include Displey($items:center,$space:start,$gap:45px);
+        a{
+            @include Textstyle($fw:500,$fs:24px,$lh:100%,$ls:0%,$clr:$color-white);
+            transition: all 0.4s;
+        }
+        @media (max-width:1114px){
+            display: none;
+        }
+    }
+    &__btns-wrapper{
+        @include Displey($items:center,$space:start,$gap:15px);
+    }
+    &__contact-btn{
+    @include BtnStyle($btnClr:$color-black,$btnbg:$color-white,$btnborder:transparent);
+    transition: all 0.4s;
+    &:hover{
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    &:active{
+        @include Active();
+    } 
+    @media(max-width:729px){
+        display: none;
+    }
+    }  
+    &__mobile-phone{
+        border: none;
+        background-color: transparent;
+        display: none;
+        @media(max-width:729px) {
+            display: block;
+            &__:hover{
+                @include Active();
+            }
+            
+        }
+    }
+    &__menyu-btn{
+        border: none;
+        background-color: transparent;
+        display: none;
+        @media (max-width:1114px){
+            display: block;
+            
+        }
+    } 
+}

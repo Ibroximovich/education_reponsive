@@ -1,0 +1,81 @@
+.about__words-title-responsive{
+    display: none;
+    // about__words-title-responsive mobile 
+    @media(max-width:720px){
+        text-align: center;
+        display: block;
+        margin-top: 30px;
+        @include Textstyle($fw:700,$fs:40px,$lh:100%,$ls:0%,$clr:$color-black);
+    }
+      // about__words-title-responsive tablet
+    @media(max-width:1102px){
+        text-align: center;
+        display: block;
+        margin-top: 30px;
+        @include Textstyle($fw:700,$fs:40px,$lh:100%,$ls:0%,$clr:$color-black);
+    }
+}
+.about{
+    @include Displey($items:start,$space:space-between,$gap:46px);
+    padding: 214px 0px;
+    //  about-section responsive tablet 
+    @media (max-width:1102px){
+        padding: 40px 0 40px;
+        @include Displey($items:start,$space:center,$gap:0px);
+        flex-direction: column;
+    }
+      //  about-section responsive mobile
+    @media(max-width:720px){
+        padding: 40px 0 40px;
+        @include Displey($items:start,$space:center,$gap:0px);
+        flex-direction: column;
+    }
+    &__img{
+         //  about-section responsive img mobile
+        @media (max-width:720px){
+            max-width: 300px;
+            max-height: 276px;
+           margin: 0 auto;
+        }
+        //  about-section  responsive img tablet 
+        @media (max-width:1102px){
+         max-width: 100%;
+         max-height: 492px;
+           margin: 0 auto;
+        }
+    }
+    &__words-title{
+        margin-top: 30px;
+        margin-bottom: 48px;
+        @include Textstyle($fw:700,$fs:40px,$lh:100%,$ls:0%,$clr:$color-black);
+        // about words title responsive mobile 
+        @media(max-width:720px){
+            display: none;
+            
+        }
+         // about words title responsive tablet 
+        @media(max-width:1102px){
+            display: none;
+            
+        }
+    }
+    &__words-text{
+        @include Textstyle($fw:400,$fs:24px,$lh:100%,$ls:0%,$clr:$color-black);
+        max-width: 584px;
+          // about-section words-text responsve mobile
+        @media (max-width:720px) {
+            text-align: center;
+            @include Textstyle($fw:400,$fs:16px,$lh:100%,$ls:0%,$clr:$color-black);
+            max-width: 100%;
+        }
+        // about-section words-text responsve tablet 
+        @media (max-width:1102px) {
+            text-align: center;
+            @include Textstyle($fw:400,$fs:16px,$lh:100%,$ls:0%,$clr:$color-black);
+            max-width: 100%;
+        }
+    }
+    &__words-text-2{
+        @include Textstyle($fw:400,$fs:24px,$lh:100%,$ls:0%,$clr:$color-black);
+    }
+}

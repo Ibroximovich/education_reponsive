@@ -1,0 +1,92 @@
+.hero{
+    @include Displey($items:center,$space:space-between,$gap:0px);
+    @media(max-width:1113px) {
+        @include Displey($items:center,$space:center,$gap:50px);
+        flex-direction: column-reverse;
+    }
+      
+    &__words-wrapper{
+        padding-top: 10px;
+        @media (max-width:1113px){
+            @include Displey($items:center,$space:center,$gap:0px);
+            flex-direction:column ;
+        }
+    }
+    &__words-title{
+        @include Textstyle($fw:700,$fs:48px,$lh:100%,$ls:0%,$clr:$color-black);
+        max-width: 100%;
+        @media (max-width:1113px){
+            @include Textstyle($fw:700,$fs:40px,$lh:100%,$ls:0%,$clr:$color-black);
+            text-align: center;
+        }
+    }
+    &__words-title--span{
+        @include Textstyle($fw:700,$fs:48px,$lh:100%,$ls:0%,$clr:$color-blue);
+    }
+    &__words-text{
+        @include Textstyle($fw:400,$fs:18px,$lh:100%,$ls:0%,$clr:$color-black);
+        margin-top: 40px;
+        margin-bottom: 50px;
+        max-width: 100%;
+        @media (max-width:1113px) {
+            text-align: center;
+        }
+    }
+    &__words-btns{
+        @include Displey($items:start,$space:start,$gap:40px);
+        @media (max-width:682px){
+            gap: 20px;
+        }
+    }
+    &__tel-btn{
+      @include  BtnStyle($btnClr:$color-white,$btnbg:$color-bg-btn,$btnborder:transparent);
+      &:active{
+          transition: 0.4s;
+          @include Active();
+      }
+      &:hover{
+          transition: 0.4s;
+         cursor: pointer;
+         background-color: $color-white;
+         border-color: $color-blue;
+         color: $color-black;
+      }
+      @media (max-width:682px){
+            padding: 11px 15px;
+      }
+    }
+    &__info-btn{
+        @include  BtnStyle($btnClr:$color-black,$btnbg:$color-white,$btnborder:$color-bg-btn);
+        &:active{
+            transition: 0.4s;
+            @include Active();
+        }
+        &:hover{
+            transition: 0.4s;
+           cursor: pointer;
+           background-color: $color-blue;
+           border-color: $color-blue;
+           color: $color-white;
+        }
+        @media (max-width:682px){
+            padding: 11px 15px;
+      }
+    }
+    &__words-img{
+        @media (max-width:734px) {
+            // width: 100%;
+            max-width: 321px;
+            max-height: 321px;
+            // margin: 0 auto;
+            padding-right: 80px;
+            
+        }
+        @media (max-width:1111px){
+            width: 100%;
+            max-width: 450px;
+            max-height: 450px;
+            margin: 0 auto;
+        }
+    }
+    
+}
